@@ -1,0 +1,185 @@
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+
+h1 {
+  color: #ca584e;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  padding-bottom: 24px;
+  text-wrap: balance;
+  white-space: normal; 
+  text-align: center;
+}
+
+.p {
+  font-family: Nunito;
+}
+
+
+.navbar-brand {
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #a9443c;
+}
+
+.navbar-nav {
+  font-family: Nunito;
+  justify-content: space-between;
+
+}
+
+.navbar-nav .nav-link {
+  color: #505050;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ca4e96;
+}
+
+.btn-primary {
+  background-color: #db72b0;
+  border-color: #505050;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  background-color: #e6a9cc;
+  border-color: #a9443c;
+}
+
+footer {
+  background-color: #e7e7e7;
+  padding: 16px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: #505050;
+}
+
+.content-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-container {
+  width: 50%;
+  text-align: justify;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(216, 93, 93);
+  border-radius: 10px;
+  overflow: hidden;
+  height: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.reseña {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reseña h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.reseña p {
+  color: #555;
+}
+
+.nombre {
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+@media (max-width: 768px) {
+  .reseñas-container {
+      grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .col-md-3 {
+    flex: 1 1 calc(50% - 10px); 
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container {
+    width: 100%;
+  }
+
+  .col-md-3 {
+    flex: 1 1 100%; 
+  }
+}
