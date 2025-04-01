@@ -1,0 +1,46 @@
+#carouselExample {
+    .carousel-inner {
+      border-radius: 10px;
+      overflow: hidden; 
+    }
+  
+    .carousel-item {
+      img {
+        transition: transform 0.5s ease;
+        border-radius: 10px; 
+      }
+  
+      &:hover img {
+        transform: scale(1.05); 
+      }
+    }
+  
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 50%;
+    }
+  
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+      z-index: 10;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #carouselExample .carousel-item img {
+      object-fit: cover; 
+      height: 250px;
+    }
+  }
+  
+  .reseñas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }

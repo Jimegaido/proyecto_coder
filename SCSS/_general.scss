@@ -1,0 +1,62 @@
+$primary-color: #ca584e; 
+$secondary-color: #832f29;
+$hover-color: #ca4e96;
+$background-gradient: linear-gradient(to right, #fce4ec, #f8bbd0, #ff80ab, #fcbad3); 
+
+@mixin transition-all($duration: 0.3s, $timing: ease-in-out) {
+  transition: all $duration $timing;
+}
+
+%centered-text {
+  text-align: center;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-gradient;
+  background-size: 200% 200%; 
+  animation: backgroundAnimation 30s ease infinite; 
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: $primary-color;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: 3rem;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-container {
+  width: 50%;
+  text-align: justify;
+}
